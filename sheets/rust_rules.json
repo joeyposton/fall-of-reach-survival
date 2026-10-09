@@ -1,0 +1,132 @@
+{
+  "sheet": "rust_rules",
+  "about": "Every Rust rule the game reads from the player's Rust install at first launch (cached). Nothing visible from Rust.",
+  "columns": [
+    "id",
+    "bundle",
+    "class",
+    "selector",
+    "fields",
+    "observed",
+    "verified"
+  ],
+  "rows": [
+    {
+      "id": "grades",
+      "bundle": "Bundles/shared/content.bundle",
+      "class": "BuildingGrade",
+      "selector": "m_Name in twigs,wood,stone,metal,toptier",
+      "fields": "baseHealth, baseCost[itemDef,amount], damageProtecton",
+      "verified": true,
+      "observed": "twigs 10hp/50 wood, wood 250/200 wood, stone 500/300 stones, metal 1000/200 frags, toptier 2000/25 HQM"
+    },
+    {
+      "id": "constructions",
+      "bundle": "Bundles/shared/content.bundle",
+      "class": "Construction",
+      "selector": "info.name.legacyEnglish in Foundation,Wall,Doorway,Window,Floor",
+      "fields": "costMultiplier, healthMultiplier",
+      "verified": true,
+      "observed": "Foundation 1.0/1.0, Wall 1.0/1.0, Doorway 0.7, Window 0.7, Floor 0.5 (cost/health multipliers)"
+    },
+    {
+      "id": "doors",
+      "bundle": "Bundles/shared/assetscenes.bundle",
+      "class": "Door",
+      "selector": "door.hinged.wood / door.hinged.metal prefab",
+      "fields": "startHealth, baseProtection",
+      "verified": true,
+      "observed": "Door.startHealth by GameObject name: door.hinged.wood 200, door.hinged.metal 250, door.hinged.toptier 1000 (assetscenes.bundle)"
+    },
+    {
+      "id": "protection",
+      "bundle": "Bundles/shared/content.bundle",
+      "class": "ProtectionProperties",
+      "selector": "referenced by grades.damageProtecton",
+      "fields": "amounts[damageType]",
+      "verified": true,
+      "observed": "ProtectionProperties.amounts[damageType] referenced from each grade"
+    },
+    {
+      "id": "upkeep",
+      "bundle": "Bundles/shared/content.bundle",
+      "class": "Upkeep / BuildingBlockDecay",
+      "selector": "per construction",
+      "fields": "upkeepMultiplier, decay timings",
+      "verified": true,
+      "observed": "Upkeep.upkeepMultiplier per piece (174), decayGrade per piece; upkeep brackets/period are server convars in code (not data) -> design.upkeep_period_min"
+    },
+    {
+      "id": "explosives",
+      "bundle": "Bundles/shared/assetscenes.bundle",
+      "class": "TimedExplosive",
+      "selector": "explosive.timed.deployed, explosive.satchel.deployed",
+      "fields": "explosionRadius, minExplosionRadius, damageTypes, timerAmountMin/Max, dudChance",
+      "verified": true,
+      "observed": "C4 explosive.timed.deployed r4 [(16 Explosion,550)]; satchel r4 [(16,75),(11,200),(15,200)]"
+    },
+    {
+      "id": "blueprints",
+      "bundle": "Bundles/shared/items.preload.bundle",
+      "class": "ItemBlueprint",
+      "selector": "item shortname",
+      "fields": "ingredients, time, workbenchLevelRequired, amountToCreate",
+      "verified": true,
+      "observed": "1029 ItemBlueprint, ingredients/time/workbenchLevelRequired"
+    },
+    {
+      "id": "itemdefs",
+      "bundle": "Bundles/shared/items.preload.bundle",
+      "class": "ItemDefinition",
+      "selector": "shortname",
+      "fields": "itemid, stackable, category",
+      "verified": true,
+      "observed": "ItemDefinition shortname/stackable/category"
+    },
+    {
+      "id": "gather",
+      "bundle": "Bundles/shared/content.bundle",
+      "class": "ResourceDispenser",
+      "selector": "trees: ResourceDispenser on tree prefabs (assetscenes.bundle)",
+      "fields": "containedItems[amount], fractionToDisperse",
+      "verified": true,
+      "observed": "wood 250-500 per tree (Pine_c 375, Douglas_Fir_d 250, Pine_dead 500). Ore prefabs on the client have no ResourceDispenser (server-only), so ore yields are design.ore_yield"
+    },
+    {
+      "id": "tool_cupboard",
+      "bundle": "Bundles/shared/assetscenes.bundle",
+      "class": "BuildingPrivlidge",
+      "selector": "cupboard.tool.deployed",
+      "fields": "authorization radius, upkeep period",
+      "verified": true,
+      "observed": "cupboard.tool.deployed: startHealth 100, inventorySlots 29, onlyAcceptCategory 3"
+    },
+    {
+      "id": "cooking",
+      "bundle": "Bundles/shared/items.preload.bundle",
+      "class": "ItemModCookable",
+      "selector": "metal.ore, sulfur.ore",
+      "fields": "becomeOnCooked, cookTime, amountOfBecome",
+      "observed": "metal.ore -> metal.fragments 10 s; sulfur.ore -> sulfur 5 s (x1)",
+      "verified": true
+    },
+    {
+      "id": "burning",
+      "bundle": "Bundles/shared/items.preload.bundle",
+      "class": "ItemModBurnable",
+      "selector": "wood",
+      "fields": "fuelAmount, byproductItem, byproductAmount, byproductChance",
+      "observed": "wood fuel 10, charcoal 25% x1; lowgradefuel fuel 150",
+      "verified": true
+    },
+    {
+      "id": "furnace",
+      "bundle": "Bundles/shared/assetscenes.bundle",
+      "class": "BaseOven",
+      "selector": "furnace.prefab",
+      "fields": "inventory slots, cooking temperature, startHealth",
+      "observed": "furnace.prefab (assetscenes, *Oven): startHealth 500, 6 slots",
+      "verified": true
+    }
+  ]
+}

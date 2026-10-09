@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "mode": "standalone",
+  "games": [
+    {
+      "slug": "halo-mcc",
+      "role": "primary"
+    },
+    {
+      "slug": "rust",
+      "role": "companion"
+    }
+  ],
+  "components": [
+    {
+      "id": "main",
+      "fileName": "FallOfReachSurvival-*.zip",
+      "label": "Fall of Reach: Survival",
+      "kind": "main",
+      "required": true
+    }
+  ],
+  "requirements": [],
+  "mappings": [
+    {
+      "component": "main",
+      "from": "",
+      "to": "{managed}"
+    }
+  ],
+  "launch": {
+    "kind": "exe",
+    "path": "{managed}/ReachSurvival.exe",
+    "args": [
+      "--mcc",
+      "{game}",
+      "--rust",
+      "{game:rust}"
+    ]
+  },
+  "runtimeData": [
+    "{localappdata}/ReachSurvival"
+  ],
+  "notes": {
+    "beforeInstall": "Needs Halo: The Master Chief Collection with Halo: Reach installed, and Rust. The world, Spartans, Covenant and weapons are read from your MCC; only Rust's rules (recipes, building health and costs, smelting, doors, explosives) are read from your Rust. Nothing from either game is in the download.",
+    "firstLaunch": "The first start reads both games into a local cache (about 15 seconds)."
+  },
+  "multiplayer": {
+    "maxPlayers": 8,
+    "connect": {
+      "address": {
+        "log": "{localappdata}/ReachSurvival/logs/latest.log",
+        "after": "Hosting at "
+      },
+      "hostArgs": [
+        "--host"
+      ],
+      "joinArgs": [
+        "--join",
+        "{address}"
+      ]
+    }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "sheet": "halo_sources",
+  "about": "Tag paths use / (the converter turns them into Halo backslashes). Every piece of Halo content the game reads from the player's MCC install. 'verified' = exported and looked at during the feasibility check.",
+  "columns": [
+    "id",
+    "map",
+    "tagClass",
+    "tagPath",
+    "use",
+    "observed",
+    "verified"
+  ],
+  "rows": [
+    {
+      "id": "terrain_forge_world",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "sbsp",
+      "tagPath": "levels/multi/forge_halo/forge_halo",
+      "use": "world mesh + collision",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "model_spartan",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/characters/spartans/spartans",
+      "use": "player body",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "model_grunt",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "mode",
+      "tagPath": "objects/characters/grunt/grunt",
+      "use": "enemy grunt",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "model_elite",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "mode",
+      "tagPath": "objects/characters/elite/elite",
+      "use": "enemy elite",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "model_assault_rifle",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "mode",
+      "tagPath": "objects/weapons/rifle/assault_rifle/assault_rifle",
+      "use": "starting weapon",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "stats_assault_rifle",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "weap",
+      "tagPath": "objects/weapons/rifle/assault_rifle/assault_rifle",
+      "use": "rate of fire, magazine, damage via proj/jpt!",
+      "verified": true,
+      "observed": "weap mag 32 / 160 total, 10 rps, bullet 5.834-6.788 (jpt! @0x20/0x24), proj velocity 3000; layout weap 0x3F0/0x408 ReachMCC"
+    },
+    {
+      "id": "stats_spartan_vitality",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "hlmt",
+      "tagPath": "objects/characters/spartans/spartans",
+      "use": "body + shield points, recharge",
+      "verified": true,
+      "observed": "hlmt Old Damage Info @0xC0: body 45, shield 70, shield stun 7 s, recharge 3 s"
+    },
+    {
+      "id": "stats_grunt_vitality",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "char",
+      "tagPath": "objects/characters/grunt/ai/grunt",
+      "use": "body/shield",
+      "verified": true,
+      "observed": "char Vitality @0x90: body 40 (legendary 60); hlmt has no shield so shield 0"
+    },
+    {
+      "id": "stats_elite_vitality",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "char",
+      "tagPath": "objects/characters/elite/ai/elite",
+      "use": "body/shield",
+      "verified": true,
+      "observed": "char Vitality: body 70, shield 75; hlmt elite_ai shield stun 3 s, recharge 3.5 s"
+    },
+    {
+      "id": "forge_wall",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_wall_2x2/ff_wall_2x2",
+      "use": "wall piece",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "forge_doorway",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_door_2/ff_door_2",
+      "use": "doorway piece (arch, 6 m -> scaled to 3 m grid)",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "forge_window",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_wall_2x2_window/ff_wall_2x2_window",
+      "use": "window piece",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "forge_floor",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_bridge_2x2/ff_bridge_2x2",
+      "use": "floor + foundation piece",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "forge_door",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_wall_2x2/ff_wall_2x2",
+      "use": "door leaf: Forge wall panel scaled to 1.2x2.2 m (Reach's forge doors are volumes only)",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "node_rock",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/levels/forge/ff_rock_med_a/ff_rock_med_a",
+      "use": "titanium/alloy/plasma ore node (7 m, scaled ~0.3)",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "node_tree",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/props/forge_tree_fake/forge_tree_fake",
+      "use": "carbon fibre node (25 m tree, scaled ~0.35)",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "beacon",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/multi/models/mp_hill_beacon/mp_hill_beacon",
+      "use": "Forward Base Beacon (tool cupboard), 1.9 m",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "charge",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/weapons/multiplayer/assault_bomb/assault_bomb",
+      "use": "Demolition/Satchel Charge (Reach Assault bomb)",
+      "verified": true,
+      "observed": "exported OBJ, size checked"
+    },
+    {
+      "id": "stats_plasma_pistol",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "weap",
+      "tagPath": "objects/weapons/pistol/plasma_pistol/plasma_pistol",
+      "use": "Grunt weapon",
+      "observed": "bolt 16 dmg, recovery 0.08 s, velocity 20",
+      "verified": true
+    },
+    {
+      "id": "stats_plasma_rifle",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "weap",
+      "tagPath": "objects/weapons/rifle/plasma_rifle/plasma_rifle",
+      "use": "Elite weapon",
+      "observed": "bolt 6-10 dmg, 6-9 rps, velocity 25",
+      "verified": true
+    },
+    {
+      "id": "smelter",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/props/human/unsc/generator_x_large/generator_x_large",
+      "use": "Forge Smelter look",
+      "observed": "exported, 2.6 x 2.6 x 1.4 m",
+      "verified": true
+    },
+    {
+      "id": "armory",
+      "map": "haloreach/maps/forge_halo.map",
+      "tagClass": "mode",
+      "tagPath": "objects/props/human/urban/space_crate/space_crate",
+      "use": "Armory look",
+      "observed": "exported, 3.1 x 2.9 x 2.3 m (scale 0.6)",
+      "verified": true
+    },
+    {
+      "id": "stats_elite_shields",
+      "map": "haloreach/maps/ff10_prototype.map",
+      "tagClass": "hlmt",
+      "tagPath": "objects/characters/elite_ai/elite_ai",
+      "use": "Elite shield stun + recharge time",
+      "observed": "hlmt elite_ai: shield 79, stun 3 s, recharge 3.5 s",
+      "verified": true
+    }
+  ]
+}

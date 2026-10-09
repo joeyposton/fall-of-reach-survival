@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- First-launch converter: reads the player's own Halo MCC (Reach) and Rust installs and writes the
+       game's local cache. GPL-3.0 because it links Reclaimer (GPL-3.0). -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>ReachSurvival.Convert</AssemblyName>
+    <RootNamespace>ReachSurvival.Convert</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UseWPF>true</UseWPF>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AssetsTools.NET" Version="3.0.5" />
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Reclaimer.Blam"><HintPath>..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\Reclaimer.Blam.dll</HintPath></Reference>
+    <Reference Include="Reclaimer.Core"><HintPath>..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\Reclaimer.Core.dll</HintPath></Reference>
+    <Reference Include="System.Drawing.Common"><HintPath>..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\System.Drawing.Common.dll</HintPath></Reference>
+    <!-- Reclaimer's runtime dependencies, copied next to the converter (its WPF viewer parts are left out). -->
+    <None Include="..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\xcompress64.dll;..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\System.Private.Windows.Core.dll;..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\System.Private.Windows.GdiPlus.dll;..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\Microsoft.Win32.SystemEvents.dll;..\tools\reclaimer\CommApp\Gravemind2401\Reclaimer\Newtonsoft.Json.dll" CopyToOutputDirectory="PreserveNewest" Visible="false" />
+  </ItemGroup>
+
+</Project>

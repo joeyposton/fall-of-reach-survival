@@ -1,0 +1,45 @@
+{
+  "sheet": "net",
+  "columns": [
+    "id",
+    "value",
+    "status"
+  ],
+  "rows": [
+    {
+      "id": "maxPlayers",
+      "value": 8,
+      "status": "agreed"
+    },
+    {
+      "id": "transport",
+      "value": "Unity Relay (com.unity.services.multiplayer) + NGO",
+      "status": "agreed"
+    },
+    {
+      "id": "unityProjectId",
+      "value": "4bd5ab15-fd73-49f7-a085-5a441ec43fe9",
+      "status": "set (org joey-poston)"
+    },
+    {
+      "id": "hostLog",
+      "value": "{localappdata}/ReachSurvival/logs/latest.log",
+      "status": "planned"
+    },
+    {
+      "id": "hostLogPrefix",
+      "value": "Hosting at ",
+      "status": "planned"
+    },
+    {
+      "id": "joinArg",
+      "value": "--join {address}",
+      "status": "planned"
+    },
+    {
+      "id": "twoInstanceTest",
+      "value": "",
+      "status": "not run"
+    }
+  ]
+}

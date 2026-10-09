@@ -1,0 +1,24 @@
+{
+  "sheet": "building",
+  "about": "Base pieces (Forge blocks) and material tiers. Health/cost = Rust grade x Rust construction multipliers, read at runtime.",
+  "pieces": {
+    "columns": ["id", "haloName", "rustConstruction", "look", "gridSize_m", "socket"],
+    "rows": [
+      {"id": "foundation", "haloName": "Forge Platform", "rustConstruction": "Foundation", "look": "halo_sources.forge_floor", "gridSize_m": 3, "socket": "ground"},
+      {"id": "wall", "haloName": "Forge Wall", "rustConstruction": "Wall", "look": "halo_sources.forge_wall", "gridSize_m": 3, "socket": "edge"},
+      {"id": "doorway", "haloName": "Forge Doorway", "rustConstruction": "Doorway", "look": "halo_sources.forge_doorway", "gridSize_m": 3, "socket": "edge"},
+      {"id": "window", "haloName": "Forge Window", "rustConstruction": "Window", "look": "halo_sources.forge_window", "gridSize_m": 3, "socket": "edge"},
+      {"id": "floor", "haloName": "Forge Deck", "rustConstruction": "Floor", "look": "halo_sources.forge_floor", "gridSize_m": 3, "socket": "top"}
+    ]
+  },
+  "grades": {
+    "columns": ["id", "haloName", "rustGrade", "tint"],
+    "rows": [
+      {"id": "g0", "haloName": "Frame", "rustGrade": "twigs", "tint": "#9fb4c7"},
+      {"id": "g1", "haloName": "Carbon", "rustGrade": "wood", "tint": "#6f7d5a"},
+      {"id": "g2", "haloName": "Titanium", "rustGrade": "stone", "tint": "#b8b8b0"},
+      {"id": "g3", "haloName": "Alloy", "rustGrade": "metal", "tint": "#5d6b7a"},
+      {"id": "g4", "haloName": "Forerunner", "rustGrade": "toptier", "tint": "#c9b26a"}
+    ]
+  }
+}

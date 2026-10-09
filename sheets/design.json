@@ -1,0 +1,106 @@
+{
+  "sheet": "design",
+  "about": "Values that are this mashup's own design (Rust keeps the equivalents as server settings in code, not readable data).",
+  "columns": [
+    "id",
+    "value",
+    "why"
+  ],
+  "rows": [
+    {
+      "id": "upkeep_period_min",
+      "value": "60",
+      "why": "Rust charges upkeep continuously over a day (server convars); matches here last hours, so a share is due every 60 min"
+    },
+    {
+      "id": "raid_interval_s",
+      "value": 600,
+      "why": "first Covenant raid 10 min after a beacon is placed"
+    },
+    {
+      "id": "raid_squad",
+      "value": "1 elite + 3 grunts",
+      "why": "v0.1 balance"
+    },
+    {
+      "id": "grid_m",
+      "value": 3,
+      "why": "Rust building grid; Forge pieces (6 m) scaled 0.5"
+    },
+    {
+      "id": "crash_ammo",
+      "value": 32,
+      "why": "one MA37 magazine at spawn"
+    },
+    {
+      "id": "ore_yield",
+      "value": "titanium node 1000 items.stone; alloy node 500 items.metal_ore; plasma node 500 items.sulfur_ore",
+      "why": "Rust ships ore yields only on its servers, so the client copy can't supply them; these are our own numbers"
+    },
+    {
+      "id": "drop_amounts",
+      "value": "grunt 3-6 items.fat; elite 5-10 items.cloth",
+      "why": "our own: Rust gets these from animals and hemp, which aren't in Halo"
+    },
+    {
+      "id": "v01_scope",
+      "value": "craft up to items.satchel with items.smelter + items.armory1; items.charge (C4) in v0.2",
+      "why": "agreed 2026-10-08"
+    },
+    {
+      "id": "hits_per_node",
+      "value": "10",
+      "why": "each melee/hit on a node gives a tenth of its total (Rust's tool gather rates are server-side)"
+    },
+    {
+      "id": "melee_damage",
+      "value": "45",
+      "why": "Spartan melee, blunt; strips most of a Spartan's 70 shields (Reach's own melee is a server-side physics value)"
+    },
+    {
+      "id": "reload_s",
+      "value": "2.2",
+      "why": "MA37 reload time (Reach animation length, not in the tags we read)"
+    },
+    {
+      "id": "respawn_s",
+      "value": "8",
+      "why": "time before a dead Spartan can respawn"
+    },
+    {
+      "id": "privilege_radius_m",
+      "value": "30",
+      "why": "beacon (tool cupboard) zone; Rust uses building-block bounds"
+    },
+    {
+      "id": "node_count",
+      "value": "tree 140; titanium 70; alloy 50; plasma 40",
+      "why": "density on Forge World's island"
+    },
+    {
+      "id": "beacon_slots",
+      "value": "24",
+      "why": "Rust's cupboard inventorySlots is 29 incl. UI; we use 24"
+    },
+    {
+      "id": "grunt_shield",
+      "value": "0",
+      "why": "Reach's Grunt model (hlmt) has no shield block, so the char's shield number is unused in Reach too"
+    },
+    {
+      "id": "upkeep_share",
+      "value": "0.1",
+      "why": "share of each piece's build cost due per period, x Rust's per-piece upkeepMultiplier (Rust's first upkeep bracket is 10%)"
+    },
+    {
+      "id": "ai_shots_per_s",
+      "value": "grunt 0.6; elite 1.2",
+      "why": "Covenant fire rate; Reach's per-shot damage is kept, its AI burst/accuracy tables (char tags) aren't mapped yet"
+    },
+    {
+      "id": "ai_spread_deg",
+      "value": "7",
+      "why": "Covenant aim error; with 4 raiders a full-shield Spartan survives ~25 s of fire"
+    }
+  ]
+}

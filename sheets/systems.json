@@ -1,0 +1,109 @@
+{
+  "sheet": "systems",
+  "columns": [
+    "id",
+    "what",
+    "rulesFrom",
+    "authority",
+    "netMessages",
+    "done"
+  ],
+  "rows": [
+    {
+      "id": "converter",
+      "what": "first-launch converter: Reach tags + Rust rules -> cache folder (verified on this PC: Halo 8 s, Rust 4 s, 0 errors)",
+      "rulesFrom": "halo_sources, rust_rules",
+      "authority": "local",
+      "netMessages": "none",
+      "done": true
+    },
+    {
+      "id": "world",
+      "what": "load Forge World mesh + collision from cache",
+      "rulesFrom": "halo_sources.terrain_forge_world",
+      "authority": "local",
+      "netMessages": "none",
+      "done": true
+    },
+    {
+      "id": "gather",
+      "what": "melee resource nodes to gather",
+      "rulesFrom": "rust_rules.gather",
+      "authority": "host",
+      "netMessages": "GatherHit, InvDelta",
+      "done": true
+    },
+    {
+      "id": "inventory",
+      "what": "slots, stacking",
+      "rulesFrom": "rust_rules.itemdefs",
+      "authority": "host",
+      "netMessages": "InvDelta",
+      "done": true
+    },
+    {
+      "id": "crafting",
+      "what": "queue crafts with Rust times/costs",
+      "rulesFrom": "rust_rules.blueprints",
+      "authority": "host",
+      "netMessages": "CraftReq, CraftDone",
+      "done": true
+    },
+    {
+      "id": "smelting",
+      "what": "Forge Smelter burns fuel and cooks ore with Rust rates",
+      "rulesFrom": "rust_rules.cooking, rust_rules.burning, rust_rules.furnace",
+      "authority": "host",
+      "netMessages": "OvenState",
+      "done": true
+    },
+    {
+      "id": "building",
+      "what": "snap Forge pieces on 3 m grid, upgrade tiers",
+      "rulesFrom": "rust_rules.grades, rust_rules.constructions",
+      "authority": "host",
+      "netMessages": "PlaceReq, Upgrade, PieceState",
+      "done": true
+    },
+    {
+      "id": "privilege",
+      "what": "beacon = building privilege + upkeep",
+      "rulesFrom": "rust_rules.tool_cupboard, rust_rules.upkeep, design.upkeep_period_min, design.upkeep_share, design.privilege_radius_m",
+      "authority": "host",
+      "netMessages": "Authorize",
+      "done": true
+    },
+    {
+      "id": "damage",
+      "what": "damage types x protection on pieces, players, AI",
+      "rulesFrom": "rust_rules.protection, rust_rules.explosives, rust_rules.doors",
+      "authority": "host",
+      "netMessages": "Damage, Death",
+      "done": true
+    },
+    {
+      "id": "shields",
+      "what": "Halo shield/body + recharge for Spartans",
+      "rulesFrom": "halo_sources.stats_spartan_vitality",
+      "authority": "host",
+      "netMessages": "Vitals",
+      "done": true
+    },
+    {
+      "id": "covenant_raids",
+      "what": "timed Grunt/Elite squads attack bases",
+      "rulesFrom": "combat.enemies",
+      "authority": "host",
+      "netMessages": "AiSnapshot",
+      "done": true
+    },
+    {
+      "id": "net",
+      "what": "host-authoritative NGO named messages over Unity Relay",
+      "rulesFrom": "net",
+      "authority": "host",
+      "netMessages": "all",
+      "done": false
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "sheet": "items",
+  "about": "Inventory items. Halo names on screen; stack size and recipe come from Rust (rustShortname) at runtime.",
+  "columns": [
+    "id",
+    "haloName",
+    "rustShortname",
+    "kind",
+    "look",
+    "recipeFrom",
+    "source",
+    "version"
+  ],
+  "rows": [
+    {
+      "id": "wood",
+      "haloName": "Carbon Fibre",
+      "rustShortname": "wood",
+      "kind": "resource",
+      "look": "icon_carbon",
+      "recipeFrom": "none",
+      "source": "tree node",
+      "version": "v0.1"
+    },
+    {
+      "id": "stone",
+      "haloName": "Titanium Ore",
+      "rustShortname": "stones",
+      "kind": "resource",
+      "look": "icon_titanium",
+      "recipeFrom": "none",
+      "source": "titanium node",
+      "version": "v0.1"
+    },
+    {
+      "id": "metal",
+      "haloName": "Alloy Plate",
+      "rustShortname": "metal.fragments",
+      "kind": "resource",
+      "look": "icon_alloy",
+      "recipeFrom": "none",
+      "source": "smelt items.metal_ore",
+      "version": "v0.1"
+    },
+    {
+      "id": "hqm",
+      "haloName": "Forerunner Alloy",
+      "rustShortname": "metal.refined",
+      "kind": "resource",
+      "look": "icon_forerunner",
+      "recipeFrom": "none",
+      "source": "v0.2",
+      "version": "v0.2"
+    },
+    {
+      "id": "sulfur",
+      "haloName": "Plasma Residue",
+      "rustShortname": "sulfur",
+      "kind": "resource",
+      "look": "icon_plasma",
+      "recipeFrom": "none",
+      "source": "smelt items.sulfur_ore",
+      "version": "v0.1"
+    },
+    {
+      "id": "gunpowder",
+      "haloName": "Fusion Compound",
+      "rustShortname": "gunpowder",
+      "kind": "component",
+      "look": "icon_fusion",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "ar_ammo",
+      "haloName": "MA37 Rounds",
+      "rustShortname": "ammo.rifle",
+      "kind": "ammo",
+      "look": "icon_ar_mag",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "charge",
+      "haloName": "Demolition Charge",
+      "rustShortname": "explosive.timed",
+      "kind": "explosive",
+      "look": "halo_sources.charge",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.2"
+    },
+    {
+      "id": "satchel",
+      "haloName": "Satchel Charge",
+      "rustShortname": "explosive.satchel",
+      "kind": "explosive",
+      "look": "halo_sources.charge",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "beacon",
+      "haloName": "Forward Base Beacon",
+      "rustShortname": "cupboard.tool",
+      "kind": "deployable",
+      "look": "halo_sources.beacon",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "door_wood",
+      "haloName": "Blast Door",
+      "rustShortname": "door.hinged.wood",
+      "kind": "deployable",
+      "look": "halo_sources.forge_door",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "door_metal",
+      "haloName": "Reinforced Blast Door",
+      "rustShortname": "door.hinged.metal",
+      "kind": "deployable",
+      "look": "halo_sources.forge_door",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "planner",
+      "haloName": "Forge Tool",
+      "rustShortname": "building.planner",
+      "kind": "tool",
+      "look": "icon_forge_tool",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "spawn kit",
+      "version": "v0.1"
+    },
+    {
+      "id": "hammer",
+      "haloName": "Upgrade Tool",
+      "rustShortname": "hammer",
+      "kind": "tool",
+      "look": "icon_upgrade_tool",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "spawn kit",
+      "version": "v0.1"
+    },
+    {
+      "id": "metal_ore",
+      "haloName": "Alloy Ore",
+      "rustShortname": "metal.ore",
+      "kind": "resource",
+      "look": "icon_alloy_ore",
+      "recipeFrom": "none",
+      "source": "alloy node",
+      "version": "v0.1"
+    },
+    {
+      "id": "sulfur_ore",
+      "haloName": "Plasma Ore",
+      "rustShortname": "sulfur.ore",
+      "kind": "resource",
+      "look": "icon_plasma_ore",
+      "recipeFrom": "none",
+      "source": "plasma node",
+      "version": "v0.1"
+    },
+    {
+      "id": "charcoal",
+      "haloName": "Carbon Ash",
+      "rustShortname": "charcoal",
+      "kind": "resource",
+      "look": "icon_carbon_ash",
+      "recipeFrom": "none",
+      "source": "smelter byproduct of items.wood",
+      "version": "v0.1"
+    },
+    {
+      "id": "cloth",
+      "haloName": "Fabric Weave",
+      "rustShortname": "cloth",
+      "kind": "resource",
+      "look": "icon_fabric",
+      "recipeFrom": "none",
+      "source": "drop combat.elite",
+      "version": "v0.1"
+    },
+    {
+      "id": "fat",
+      "haloName": "Methane Gel",
+      "rustShortname": "fat.animal",
+      "kind": "resource",
+      "look": "icon_methane",
+      "recipeFrom": "none",
+      "source": "drop combat.grunt",
+      "version": "v0.1"
+    },
+    {
+      "id": "lgf",
+      "haloName": "Fuel Cell",
+      "rustShortname": "lowgradefuel",
+      "kind": "component",
+      "look": "icon_fuel",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "beancan",
+      "haloName": "Improvised Frag",
+      "rustShortname": "grenade.beancan",
+      "kind": "component",
+      "look": "icon_frag",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "stash",
+      "haloName": "Supply Pouch",
+      "rustShortname": "stash.small",
+      "kind": "component",
+      "look": "icon_pouch",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "rope",
+      "haloName": "Tether Cord",
+      "rustShortname": "rope",
+      "kind": "component",
+      "look": "icon_cord",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "smelter",
+      "haloName": "Forge Smelter",
+      "rustShortname": "furnace",
+      "kind": "deployable",
+      "look": "halo_sources.smelter",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    },
+    {
+      "id": "armory1",
+      "haloName": "Armory (Tier 1)",
+      "rustShortname": "workbench1",
+      "kind": "deployable",
+      "look": "halo_sources.armory",
+      "recipeFrom": "rust_rules.blueprints",
+      "source": "craft",
+      "version": "v0.1"
+    }
+  ]
+}

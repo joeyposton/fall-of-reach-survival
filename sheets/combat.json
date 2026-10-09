@@ -1,0 +1,95 @@
+{
+  "sheet": "combat",
+  "weapons": {
+    "columns": [
+      "id",
+      "haloName",
+      "model",
+      "stats",
+      "ammoItem",
+      "start"
+    ],
+    "rows": [
+      {
+        "id": "ar",
+        "haloName": "MA37 Assault Rifle",
+        "model": "halo_sources.model_assault_rifle",
+        "stats": "halo_sources.stats_assault_rifle",
+        "ammoItem": "items.ar_ammo",
+        "start": true
+      }
+    ]
+  },
+  "explosives": {
+    "columns": [
+      "id",
+      "item",
+      "rustPrefab",
+      "fuse_s",
+      "fields"
+    ],
+    "rows": [
+      {
+        "id": "charge",
+        "item": "items.charge",
+        "rustPrefab": "explosive.timed.deployed",
+        "fuse_s": "rust",
+        "fields": "rust_rules.explosives"
+      },
+      {
+        "id": "satchel",
+        "item": "items.satchel",
+        "rustPrefab": "explosive.satchel.deployed",
+        "fuse_s": "rust",
+        "fields": "rust_rules.explosives"
+      }
+    ]
+  },
+  "enemies": {
+    "columns": [
+      "id",
+      "haloName",
+      "model",
+      "vitality",
+      "weapon",
+      "behaviour",
+      "drops"
+    ],
+    "rows": [
+      {
+        "id": "grunt",
+        "haloName": "Grunt",
+        "model": "halo_sources.model_grunt",
+        "vitality": "halo_sources.stats_grunt_vitality",
+        "weapon": "halo_sources.stats_plasma_pistol",
+        "behaviour": "rush nearest base wall, flee when Elite dies",
+        "drops": "items.fat"
+      },
+      {
+        "id": "elite",
+        "haloName": "Elite",
+        "model": "halo_sources.model_elite",
+        "vitality": "halo_sources.stats_elite_vitality",
+        "weapon": "halo_sources.stats_plasma_rifle",
+        "behaviour": "lead squad, target players near beacon",
+        "drops": "items.cloth"
+      }
+    ]
+  },
+  "players": {
+    "columns": [
+      "id",
+      "model",
+      "vitality",
+      "spawn"
+    ],
+    "rows": [
+      {
+        "id": "spartan",
+        "model": "halo_sources.model_spartan",
+        "vitality": "halo_sources.stats_spartan_vitality",
+        "spawn": "crash pod at random Forge World point, with weapons.ar + 1 items.ar_ammo"
+      }
+    ]
+  }
+}

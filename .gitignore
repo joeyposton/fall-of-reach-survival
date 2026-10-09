@@ -1,0 +1,19 @@
+# build outputs and local tools (Reclaimer, .NET SDK etc. are fetched by tools/setup.ps1)
+build/
+tools/
+probe/
+probe_refl/
+probe_tex/
+converter/bin/
+converter/obj/
+game/Library/
+game/Temp/
+game/Obj/
+game/Logs/
+game/UserSettings/
+game/Builds/
+game/*.csproj
+game/*.sln
+game/*.slnx
+game/.vs/
+*.user
